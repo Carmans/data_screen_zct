@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿<!--
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -32,11 +33,11 @@ $(document).ready(function(){
 </div>
 <div class="head">
   <h1>镇村通平台上线实时大屏</h1>
-  <div class="weather"><!--<img src="picture/weather.png"><span>多云转小雨</span>--><span id="showTime"></span></div>
+  <div class="weather">&lt;!&ndash;<img src="picture/weather.png"><span>多云转小雨</span>&ndash;&gt;<span id="showTime"></span></div>
 	
 	<script>
 var t = null;
-    t = setTimeout(time,1000);//開始运行
+    t = setTimeout(time,1000);//开始运行
     function time()
     {
        clearTimeout(t);//清除定时器
@@ -124,5 +125,47 @@ var t = null;
 
 <script type="text/javascript" src="js/china.js"></script> 
 <script type="text/javascript" src="js/area_echarts.js"></script> 
+</body>
+</html>
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/echarts/3.6.2/echarts.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.js"></script>
+
+  <script>
+    $(function(){
+      var myChart = echarts.init($('#main')[0]);
+      var option = {
+        title: {
+          text: 'ECharts 入门示例'
+        },
+        tooltip: {},
+        legend: {
+          data:['销量']
+        },
+        xAxis: {
+          data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {},
+        series: [{
+          name: '销量',
+          type: 'line',
+          data: [5, 20, 36, 10, 10, 20]
+        }],
+      };
+      myChart.setOption(option);
+    })
+  </script>
+</head>
+<body>
+<div id="main" style="width: 600px;height:600px;"></div>
+
 </body>
 </html>

@@ -8,5 +8,13 @@
     <artifactId>data_screen_zct</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+  <dependencies>
+      <!-- sql server driver -->
+      <dependency>
+          <groupId>net.sourceforge.jtds</groupId>
+          <artifactId>jtds</artifactId>
+          <version>1.2.4</version>
+      </dependency>
+  </dependencies>
 
 </project>

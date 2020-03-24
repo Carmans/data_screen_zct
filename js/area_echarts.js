@@ -6,7 +6,7 @@ $(function () {
         var myChart = echarts.init(document.getElementById('map_1'));
 var data = [
      {name: '海门', value: 69},
-     {name: '鄂尔多斯', value: 12},
+     {name: '鄂尔多斯', value: 120},
      {name: '招远', value: 12},
      {name: '舟山', value: 12},
      {name: '齐齐哈尔', value: 14},
